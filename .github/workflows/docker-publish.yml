@@ -60,7 +60,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: 7.16.3
+          tags: "${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:7.16.3"
 
       # Sign the resulting Docker image digest except on PRs.
       # This will only write to the public Rekor transparency log when the Docker
